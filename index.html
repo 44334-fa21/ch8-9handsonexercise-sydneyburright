@@ -1,13 +1,101 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
-		<meta charset="utf-8"> 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Burright Chapter8-9HandsOnExercise</title>
+		<meta charset="utf-8">
 		<style>
-		
-		</style>
-	</head> 
-<body> 
 
-</body> 
-</html> 
+table {border-style: solid;
+			border-color: #000000;
+			background-color: #FFDAB9; }
+#wrapper {display: flex;
+					flex-direction: row;}
+#muSurv {flex:2;}
+#myComments {flex:3;}
+
+@media screen and (max-width: 480px) {
+	#wrapper {display: block;}
+}
+
+
+		</style>
+	</head>
+<body>
+
+	<table>
+		<tr>
+			<th>Title</th>
+			<td>The Help</td>
+		</tr>
+		<tr>
+			<th>Director</th>
+			<td>Tate Taylor</td>
+		</tr>
+		<tr>
+			<th>Leading Actress</th>
+			<td>Emma Stone</td>
+		</tr>
+		<tr>
+			<th>Leading Actress</th>
+			<td>Viola Davis</td>
+		</tr>
+		<tr>
+			<th>Rating</th>
+			<td>PG-13</td>
+		</tr>
+		<tr>
+			<th>Movie Description</th>
+			<td> The story of a young white woman who is an aspiring journalist and her relationship with black maids during the Civil Rights Movement in 1963 Jackson, Mississippi</td>
+		</tr>
+		<tr>
+			<th>Movie Review</th>
+			<td><a href="http://archive.indianexpress.com/news/a-world-within-the-home/880591/0">Review by Shubhra Gupta</a></td>
+		</tr>
+	</table>
+	<form method="post" action="http://webdevbasics.net/scripts/demo.php">
+		<div id="wrapper">
+			<fieldset id="muSurv"><legend>Music Survey</legend>
+				<label for="myName">Name:</label>
+				<input type="text" name="myName" id="myName" required="required"
+				placeholder="your first and last name">
+				<lable for="myEmail">Email:</label>
+				<input type="text" name="myEmail" id="myEmail" required="required"
+				placeholder="you@yourdomain.com">
+			</fieldset>
+
+			<fieldset id=myComments><legend>Why do you like music</legend>
+				<label for="myComments"></label>
+				<textarea name="myComments" id="myComments" rows="3" cols="60"
+				required="required"></textarea>
+			</fieldset>
+
+			<fieldset id=favMu><legend>Favorite type of music:</legend>
+				<input type="radio" name="myMusic" id="p" value="Pop Music">
+				Pop Music<br>
+				<input type="radio" name="myMusic" id="c" value="Country Music">
+				Country Music<br>
+				<input type="radio" name="myMusic" id="rap" value="Rap Music">
+				Rap Music<br>
+				Favorite music decades:<br>
+				<input type="checkbox" name="myDecade" id="seven" value="seventies">
+				70s<br>
+				<input type="checkbox" name="myDecade" id="eight" value="eighties">
+				80s<br>
+				<input type="checkbox" name="myDecade" id="nine" value="nineties">
+				90s<br>
+
+			<label for="music">Choose an artist:</label>
+				<select name="artist" id="artist">
+				  <option value="Drake">Drake</option>
+				  <option value="TS">Taylor Swift</option>
+				  <option value="BTS">BTS</option>
+				  <option value="TB">The Beatles</option>
+				</select><br>
+
+				<input id="mySubmit" type="submit" value="submit"><br>
+				<input id="myReset" type="reset" value="reset">
+			</fieldset>
+		</div>
+		Sydney Burright s535331@nwmissouri.edu
+</body>
+</html>
